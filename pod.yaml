@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: trail-pod
+spec:
+  containers:
+  - name: mango-box
+    image: nginx
+    ports:
+    - containerPort: 80

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: demo-rs
+  labels:
+    app: sample
+spec:
+  # modify replicas according to your case
+  replicas: 5
+  selector:
+    matchLabels:
+      fruit: apple
+  template:
+    metadata:
+      labels:
+        fruit: apple
+    spec:
+      containers:
+      - name: apple-box
+        image: nginx
+        ports:
+        - containerPort: 80

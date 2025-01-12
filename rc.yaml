@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: demo-rc
+spec:
+  replicas: 2
+  selector:
+    app: demo-app
+  template:
+    metadata:
+      name: demo-pod
+      labels:
+        app: demo-app
+    spec:
+      containers:
+      - name: apple-box
+        image: nginx
+        ports:
+        - containerPort: 80

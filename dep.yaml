@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: demo
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: amazon
+  template:
+    metadata:
+      labels:
+        app: amazon
+    spec:
+      containers:
+      - name: phone-box
+        image: nginx
+        ports:
+        - containerPort: 80

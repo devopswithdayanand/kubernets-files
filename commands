@@ -1,0 +1,17 @@
+kubectl apply -f .\pod.yaml      --> to create a pod
+kubectl get po                   --> to get the pods
+kubectl delete pod demo-rc-txskn --> to delete a pod
+kubectl delete po trail-pod      --> to delete a pod
+kubectl apply -f .\rs.yaml       --> to create a replicaset
+kubectl get po -o wide           --> to get pods with more details
+kubectl describe po demo-rc-645vs--> to describe a pod
+kubectl apply -f .\dep.yaml      --> to create a deploymant
+kubectl get deploy               --> to get deployments
+kubectl get rs                   --> to get replicasets
+kuebctl get ns                   --> to get namesapces
+kubectl get pods -n kube-system  --> to get pods in kube-sysytem namespace
+kubeclt create ns demo           --> to create a namespace
+kubectl apply -f .\dep.yaml -n demo  --> to create a deployment in demo namespace
+kubectl get deploy -n demo           --> to get deployments in demo namespace
+kubectl delete ns demo               --> to delete a namespace
+
